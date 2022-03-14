@@ -6,4 +6,4 @@ function calcularDivisao(num1, num2) {
   return resultado;
 }
 
-module.exports=calcularDivisao;
+module.exports = calcularDivisao;
