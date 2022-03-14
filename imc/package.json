@@ -1,0 +1,28 @@
+{
+  "name": "imc",
+  "version": "1.0.0",
+  "description": "primeiro projeto node",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js",
+    "debug": "node inspect-brk index.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/tonistorres/npm_repository.git"
+  },
+  "keywords": [
+    "imc",
+    "olaFulano"
+  ],
+  "author": "Tonis <sisvenda2011@gmail.com>",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/tonistorres/npm_repository/issues"
+  },
+  "homepage": "https://github.com/tonistorres/npm_repository#readme",
+  "dependencies": {
+    "readline-sync": "^1.4.10"
+  }
+}
