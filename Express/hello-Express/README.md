@@ -12,3 +12,17 @@
   - [x] - npm i express;  
   -  [Link Express ](https://www.npmjs.com/package/express)
 
+4 - Para Automatizar o nodemon:
+  >Bem para automatizar o nodemon iremos acessar o package.json, e no sub-objeto scripts iremos adicionar a seguinte insturação:
+  ```json
+ "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev": "nodemon index.js"
+  },
+  ```
+
+5- Sobre Execução da Aplicação:
+> Para executarmos a aplicação iremos executar o comando abaixo:
+```console
+npm run dev
+```
