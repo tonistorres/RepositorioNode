@@ -16,8 +16,7 @@ const scripts = [
   { name: "Fluxo async req API Pokemon", script: "./fluxo-assincrono-req-api/index.js" },
   { name: "Hello World", script: "./hello-world/index.js" },
   { name: "Jogo de adivinhação", script: "./sorteio/index.js" },
-  { name: "Velocidade Media", script: "./velocidademedia/index.js" },
-  
+  { name: "Velocidade Media", script: "./velocidademedia/index.js" },  
 ];
 
 /* Utilizaremos a função map para iterar o array de objetos scrpts e gerar uma
