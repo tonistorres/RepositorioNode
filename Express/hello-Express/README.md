@@ -26,3 +26,15 @@
 ```console
 npm run dev
 ```
+
+OBSERVAÇÃO IMPORTANTE: A ferramenta nodemom é muito útil no desenvolvimento de aplicações, porém em produção podemos ter problemas de reinicialização da aplicação, devido ao fato que qualquer alteração sofrida em um dado arquivo afeta toda aplicação. 
+Para produção configure seu package.json colocando no objeto Script node index.js
+
+  ```json
+ "scripts": {
+     "script":"node index.js",
+    "test": "echo \"Error: no test specified\" && exit 1",
+//    "dev": "nodemon index.js"
+
+  },
+  ```
