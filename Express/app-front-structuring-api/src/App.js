@@ -1,12 +1,20 @@
+import React, { Component } from 'react';
+import Header from'./components/Header/Header';
+import Fotter from './components/Fotter/Fotter';
+import getRecipes from '../services/getRecipes';
 
-import './App.css';
+export default class App extends Component {
+  render() {
 
-function App() {
-  return (
-    <div className="App">
-      
-    </div>
-  );
+    this.componentDidMount(){
+
 }
 
-export default App;
+    return (
+      <div>
+        <Header/>
+        <Fotter/>
+      </div>
+    )
+  }
+}
