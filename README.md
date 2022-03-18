@@ -1,5 +1,5 @@
 ### Hello World Node + Express
- ![Node + Express](/node.png)
+ ![Node + Express](./node.png)
  
 1- Demonstrando Hello Workd em Express;
 2- Dependencias ou Pacotes Instalados:
