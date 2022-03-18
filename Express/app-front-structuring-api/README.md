@@ -11,6 +11,7 @@
 ```console
    - [x] - npx create-react-app app
    - [x] - npm install --save styled-components
+   
 ```
 
 - Limpando Arquivos (exclusões):

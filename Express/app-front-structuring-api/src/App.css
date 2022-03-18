@@ -2,3 +2,11 @@
   text-align: center;
 }
 
+.card-group{
+  align-items: center;
+  background-color: yellow;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  
+}
