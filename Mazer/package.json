@@ -1,0 +1,19 @@
+{
+  "name": "mazer",
+  "description": "1- Demonstrando Hello Workd em Express; 2- Dependencias ou Pacotes Instalados:    - [x] - FrameWork Express ;    - [x] - nodemom ;",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev": "nodemon index.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.17.3"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.15"
+  }
+}
