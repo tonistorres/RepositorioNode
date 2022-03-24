@@ -31,10 +31,6 @@
   > tenha o docker intalado use o arquvivo abaixo para suspender um container com micro-serviço do 
   > gerenciador de banco de dados mysql:
 
-  ![image info](./dc.png)
-   ###### Dentro do VS Code ou editor da sua  preferencia, criar uma arquivo docker-compose.yml,
-   ###### cole o codigo abaixo dentro do arquivo docker-compose.yml.
-  
   ```yml
   version: "3.1"
   services:
@@ -46,11 +42,7 @@
     ports:
       - 3308:3306
   ```
-##### No terminal do VS Code rode o comando abaixo para criar o micro-serviço 
 
-```console
-docker-compose up -d
-```
   
 - [x] [Instalando MySQL Workbench](https://dev.mysql.com/doc/workbench/en/wb-installing-linux.html)
 
