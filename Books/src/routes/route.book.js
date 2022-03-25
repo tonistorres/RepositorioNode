@@ -3,6 +3,8 @@ const router = express.Router();
 const { findAll, findAllLimit, getById, create} = require("../models/book.data");
 
 const HTTP_STATUS_200 = 200;
+const HTTP_STATUS_201 = 201;
+const HTTP_STATUS_500 = 500;
 // Na rota get ('/book') por meio da função findAll trazemos todos usuários Data Base
 router.get("/", async (_req, response) => {
   try {
@@ -13,7 +15,7 @@ router.get("/", async (_req, response) => {
     return response.status(HTTP_STATUS_200).send([]);
   } catch (error) {
     console.log(error.massege);
-    return res.status(500).end();
+    return res.status(HTTP_STATUS_500).end();
   }
 });
 
@@ -28,7 +30,7 @@ router.get("/:id", async (req, res) => {
         return res.send(book);      
     } catch (error) {
     console.log(error.message);  
-    return res.status(500).end();      
+    return res.status(HTTP_STATUS_500).end();      
     }  
 });
 
@@ -40,7 +42,7 @@ router.get("/param", async (req, res) => {
     return res.send(books);
   } catch (error) {
     console.log(error.massege);
-    return res.status(500).end();
+    return res.status(HTTP_STATUS_500).end();
   }
 });
 
@@ -49,10 +51,10 @@ router.post('/', async (req, res) => {
     try {
       const { titulo, autor, edicao } = req.body;
       const book = await create({titulo, autor, edicao});
-      return res.status(201).json(book);
+      return res.status(HTTP_STATUS_201).json(book);
     } catch (error) {
       console.log(error);
-      return res.status(500).end();
+      return res.status(HTTP_STATUS_500).end();
     }
   })
 
