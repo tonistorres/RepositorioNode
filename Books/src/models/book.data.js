@@ -11,8 +11,14 @@ const findAllLimit = async (limit) => {
     return books;
 }
 
+const getById = async (id) => {
+    const [book] = await connectionMysql.execute('SELECT * FROM books WHERE id = ?', [id]);
+    return book;
+}
+
 
 module.exports = {
      findAll,
      findAllLimit,
+     getById,
 }
