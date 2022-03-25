@@ -1,6 +1,6 @@
 const express = require("express");
 const router = express.Router();
-const { findAll, findAllLimit, getById } = require("../models/book.data");
+const { findAll, findAllLimit, getById, create} = require("../models/book.data");
 
 const HTTP_STATUS_200 = 200;
 // Na rota get ('/book') por meio da função findAll trazemos todos usuários Data Base
@@ -13,6 +13,7 @@ router.get("/", async (_req, response) => {
     return response.status(HTTP_STATUS_200).send([]);
   } catch (error) {
     console.log(error.massege);
+    return res.status(500).end();
   }
 });
 
@@ -26,7 +27,8 @@ router.get("/:id", async (req, res) => {
         }
         return res.send(book);      
     } catch (error) {
-    console.log(error.message);        
+    console.log(error.message);  
+    return res.status(500).end();      
     }  
 });
 
@@ -38,7 +40,20 @@ router.get("/param", async (req, res) => {
     return res.send(books);
   } catch (error) {
     console.log(error.massege);
+    return res.status(500).end();
   }
 });
+
+// reta criar um registro no banco de dados 
+router.post('/', async (req, res) => {
+    try {
+      const { titulo, autor, edicao } = req.body;
+      const book = await create({titulo, autor, edicao});
+      return res.status(201).json(book);
+    } catch (error) {
+      console.log(error);
+      return res.status(500).end();
+    }
+  })
 
 module.exports = router;

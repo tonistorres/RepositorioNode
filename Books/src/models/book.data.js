@@ -17,8 +17,20 @@ const getById = async (id) => {
 }
 
 
+const create = async ({ titulo, autor, edicao }) => {
+    const  [ { insertId } ] = await connectionMysql.execute('INSERT INTO books (titulo, autor,edicao) VALUES (? , ? , ?)', [ titulo, autor, edicao ]);
+    return {
+        id: insertId,
+        titulo,
+        autor,
+        edicao,
+    }
+}
+
+
 module.exports = {
      findAll,
      findAllLimit,
      getById,
+     create,
 }
