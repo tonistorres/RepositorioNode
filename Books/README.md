@@ -4,27 +4,56 @@
 
 #### 2- Fazer a Integração da Aplicação com Gerenciador de Banco Dados MYSQ:
 
-### Ferramentas Utilizadas:
+### Ferramentas e Pacotes Utilizados:
 
 - [x] - FrameWork Express ;
 - [x] - nodemom;
 - [x] - Mysql;
 - [x] - MySQL Workbench (Ferramenta Gráfica);
+- [x] - Client que faz a conexão do Node com o Mysql (msql2); 
+- [x] - body-parse;
 
 #### 3 - Comandos Utilizados instalação:
 
 - [x] - npm i nodemon -D;
 - [Link Pacote Nodemon ](https://duckduckgo.com)
-  > Obs.: O D MAIÚSCULO é informa que é uma forma contraída de dizer que é uma Dependência de Desenvolvimento, ou seja, na hora de subir para a produção essa dependência não tem importancia para o bom funcionamento da minha aplicação, essa dependencia é somente para testes no momento do desenvolvimento.
+  > Obs.: O D MAIÚSCULO é informa que é uma forma contraída de dizer que é uma Dependência de 
+  > Desenvolvimento, ou seja, na hora de subir para a produção essa dependência não tem importancia para 
+  > o bom funcionamento da minha aplicação, essa dependencia é somente para testes no momento do 
+  > desenvolvimento.
+ 
 - [x] - npm i express;
 - [Link Express ](https://www.npmjs.com/package/express)
+ 
+- [x] - npm install --save mysql2
+ > Client Utilizado para fazer a conexão de uma palicação Node Com Mysql (connector);
+ 
+- [x] - npm i body-parser
+  > Middleware de análise do corpo do Node.js.
+  > Analise os corpos de solicitação de entrada em um middleware antes de seus manipuladores,
+  > disponíveis na propriedade req.body.
+- [Body-Parse](https://www.npmjs.com/package/body-parser)
+  
+ ##### Código que faz a conexão entre Node e Mysql 
+```javascript
+// get the client
+const mysql = require('mysql2/promise');
+
+// Create the connection pool. The pool-specific settings are the defaults
+const connection = mysql.createPool({
+  host: 'localhost',
+  user: 'root',
+  database: 'Books',
+  password:'senha'
+});
+```
+
 - [x] - npm i express-rescue;
     > Este é um wrapper livre de dependência (ou camada de código de
     > .açúcar, se você preferir) para middlewares assíncronos que
     > garante que todos os erros assíncronos sejam passados ​​para
     > sua pilha de manipuladores de erros, permitindo que você tenha
     > um código mais limpo e legível.
-
 - [x] [Link Express-Rescue ](https://www.npmjs.com/package/express-rescue)
 - [x] [Instalando MySQL Shell ou Linux](https://dev.mysql.com/doc/mysql-shell/8.0/en/mysql-shell-install-linux-quick.html)
   > OBSERVAÇÃO: Uma alternativa caso não tenha o mysql instalado em seu PC é instalar o docker, caso 
