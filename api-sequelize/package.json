@@ -1,5 +1,5 @@
 {
-  "name": "books",
+  "name": "api-sequelize",
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
@@ -12,5 +12,8 @@
   "dependencies": {
     "mysql2": "^2.3.3",
     "sequelize": "^6.17.0"
+  },
+  "devDependencies": {
+    "git-commit-msg-linter": "^4.1.1"
   }
 }

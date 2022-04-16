@@ -28,6 +28,18 @@ const create = async ({ titulo, autor, edicao }) => {
 }
 
 
+const update = async ({ id, titulo, autor, edicao }) => {
+    await connectionMysql.execute('UPDATE books SET titulo = ?, autor = ?, edicao = ? WHERE id = ?', [ titulo, autor, edicao, id ]);
+    return {
+        id,
+        titulo,
+        autor,
+        edicao,
+        update,
+    }
+}
+
+
 module.exports = {
      findAll,
      findAllLimit,
